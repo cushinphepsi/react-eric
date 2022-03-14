@@ -1,0 +1,10 @@
+.container {
+  text-align: center;
+  .todo-container {
+    font-size: 14px;
+
+    .item-container:first-child {
+      border-top: 1px solid gray;
+    }
+  }
+}
