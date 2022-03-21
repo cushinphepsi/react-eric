@@ -1,6 +1,13 @@
 .container {
   text-align: center;
   width: 400px;
+  .form-group {
+    .btn {
+      height: 28px;
+      padding: 0 10px;
+      margin: 2px 5px;
+    }
+  }
   .todo-container {
     font-size: 14px;
 

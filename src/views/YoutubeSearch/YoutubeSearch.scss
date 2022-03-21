@@ -1,0 +1,35 @@
+.yt-container {
+  text-align: center;
+  .yt-search {
+    input {
+      width: 260px;
+      height: 33px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin: 0px 8px;
+      vertical-align: middle;
+    }
+  }
+
+  .yt-result {
+    height: 225px;
+    width: 100%;
+    display: flex;
+    margin: 15px 0px;
+    .left {
+      width: 40%;
+      padding: 0px 3px;
+    }
+    .right {
+      width: 60%;
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 2px 7px;
+      .title {
+        font-size: 16px;
+      }
+    }
+  }
+}

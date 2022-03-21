@@ -1,0 +1,12 @@
+.user-container {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 19px;
+  width: 335px;
+  .user-item {
+    border-bottom: 1px solid;
+  }
+  .user-item:first-child {
+    border-top: 1px solid;
+  }
+}

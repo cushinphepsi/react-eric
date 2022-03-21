@@ -28,6 +28,30 @@ class Nav extends React.Component {
               Todo list
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/user"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              User With Axios
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/redux"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              Todo With Redux
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/search"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              Search Youtube
+            </NavLink>
+          </li>
         </ul>
       </div>
     );

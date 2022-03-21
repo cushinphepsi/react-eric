@@ -1,0 +1,37 @@
+.container {
+  .header {
+    margin: 6px 0px;
+    button {
+      margin: 0px 5px;
+      height: 27px;
+      padding: 2px 13px;
+    }
+    input {
+      width: 200px;
+      height: 29px;
+      display: inline;
+    }
+  }
+  .todo-container {
+    .todo-list {
+      padding: 6px;
+      margin: 4px;
+      border-bottom: 1px solid;
+
+      button {
+        margin: 0px 5px;
+        height: 27px;
+        padding: 2px 13px;
+      }
+      input {
+        width: 200px;
+        height: 29px;
+        display: inline;
+      }
+    }
+
+    .todo-list:first-child {
+      border-top: 1px solid;
+    }
+  }
+}

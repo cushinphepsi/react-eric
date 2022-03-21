@@ -1,7 +1,8 @@
 import React from "react";
 import TodoItem from "./TodoItem";
+import WrapColor from "../HOC/Wrapper"
 import "./Todo.scss";
-
+import { toast } from 'react-toastify'
 class Todo extends React.Component {
     state = {
         arrJob: [
@@ -24,10 +25,16 @@ class Todo extends React.Component {
             id: Math.floor(Math.random() * 100000),
             nameJob: this.state.inputValue,
         };
+        if (!this.state.inputValue) {
+            toast.error('Please enter input')
+            return
+        }
         this.setState({
             arrJob: [...this.state.arrJob, newJob],
             inputValue: "",
         });
+
+        toast.success('Add successfully')
     };
 
     handleDelete = (id) => {
@@ -35,6 +42,7 @@ class Todo extends React.Component {
         this.setState({
             arrJob: currentArrJob,
         });
+        toast.error('Delete successfully')
     };
 
     handleEdit = (job) => {
@@ -48,7 +56,7 @@ class Todo extends React.Component {
                 arrJob: arrJobCopy,
                 jobCurrent: {},
             });
-
+            toast.info('Edit successfully')
             return;
         }
 
@@ -62,8 +70,7 @@ class Todo extends React.Component {
     };
 
     render() {
-        // let { id } = this.props.match.params;
-        console.log(this.props.id);
+
         return (
             <div className="container">
                 <div className="form-group">
@@ -86,9 +93,10 @@ class Todo extends React.Component {
                         setJobCurrent={this.setJobCurrent}
                     />
                 </div>
+
             </div>
         );
     }
 }
 
-export default Todo;
+export default WrapColor(Todo)
